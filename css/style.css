@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+pre {
+    margin:0;
+    padding: 1rem;
+}
+.php {
+    color: #a9b7c6;
+    background: #2b2b2b;
+}
+.php .tag,
+.php .keyword {
+    color: #cc7832;
+    font-weight: bold;
+}
+.php .variable {
+    color: #9876aa;
+}
+.php .string {
+    color: #6a8759;
+}
+.php .number {
+    color: #6897bb;
+}
+.php .function {
+    color: #ffc66d;
+}
