@@ -18,8 +18,12 @@ pre {
 .php .variable {
     color: #9876aa;
 }
-.php .string {
+.php .string,
+.php .string a {
     color: #6a8759;
+}
+.php .string a:hover {
+    font-weight: bold;
 }
 .php .number {
     color: #6897bb;
