@@ -11,6 +11,10 @@ app.config(function ($routeProvider) {
       title: 'photo.txt',
       templateUrl: '/views/photo.html'
     })
+    .when('/lorem', {
+      title: 'lorem.txt',
+      templateUrl: '/views/lorem.html'
+    })
     .when('/404', {
       title: '404.html',
       lang: 'html',
