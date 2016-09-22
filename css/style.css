@@ -1,36 +1,69 @@
 html,
 body {
     height: 100%;
+    font-size: 12px;
 }
 body {
     background: url('/images/cork-wallet.png') #ddd;
     box-sizing: border-box;
-    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     line-height: 1.4;
-    padding-top: 3rem;
 }
 .window {
+    border-radius: 3px 3px 0 0;
     box-shadow: 0 10px 40px rgba(0,0,0,.5);
     color: #a9b7c6;
-    height: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
     margin: 0 auto;
     width: 80%;
 }
 .header {
-    background: #202020;
-    color: #909090;
-    height: 5%;
+    background: #eee;
+    border-radius: 3px 3px 0 0;
+
+}
+.header h1 {
+    color: #666;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    padding: .5rem 1rem;
 }
 .container {
     background: #2b2b2b;
-    height: 95%;
     overflow: auto;
+}
+.tabs {
+    background: #202020;
+    font-size: .9rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.tabs .tab {
+    float: left;
+}
+.tab a {
+    color: #909090;
+    display: inline-block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+}
+.tab a:hover {
+    color: #ddd;
+}
+.tab a.active {
+    background: #2b2b2b;
 }
 pre {
     box-sizing: border-box;
     margin:0;
     max-height: 100%;
-    padding: 1rem;
+    padding: .5rem;
 }
 .php .tag,
 .php .keyword {
