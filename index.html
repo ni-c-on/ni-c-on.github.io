@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>ni-c-on.github.io</title>
+  <title ng-bind="title + ' &mdash; ni-c-on.github.io'"></title>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
@@ -15,17 +15,22 @@
 <body>
   <div class="window">
     <div class="header">
-      <h1>~/ni-c-on.github.io/resume.php</h1>
+      <h1>~/ni-c-on.github.io/<span ng-bind="title"></span></h1>
     </div>
-    <ul class="tabs">
+    <ul class="tabs" ng-controller="menuCtrl">
       <li class="tab">
-        <a href="#" class="active">resume.php</a>
+        <a ng-href="#/" ng-class="{active: isActive('/')}">resume.php</a>
       </li>
       <li class="tab">
-        <a href="#">photo.txt</a>
+        <a ng-href="#/photo" ng-class="{active: isActive('/photo')}">photo.txt</a>
+      </li>
+      <li class="tab">
+        <a ng-href="#/404" ng-show="isActive('/404')" ng-class="{active: isActive('/404')}">404.html</a>
       </li>
     </ul>
-    <div class="container" ng-view></div>
+    <div class="container">
+      <pre><code class="{{lang}}" ng-view></code></pre>
+    </div>
   </div>
 </body>
 </html>
