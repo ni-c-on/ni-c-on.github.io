@@ -64,6 +64,13 @@ pre {
     margin:0;
     padding: .5rem 1rem 1rem;
 }
+pre a {
+    color: #a9b7c6;
+    text-decoration: none;
+}
+pre a:hover {
+    font-weight: bold;
+}
 /* Syntax highlighting */
 .php .tag,
 .php .keyword {
